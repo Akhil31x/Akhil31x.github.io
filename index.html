@@ -32,6 +32,7 @@
         /* Hero */
         .hero { min-height: 80vh; display: flex; flex-direction: column; justify-content: center; }
         .tagline { font-size: 1.25rem; color: var(--text-secondary); max-width: 650px; }
+        .btn-group { margin-top: 20px; display: flex; gap: 15px; }
 
         /* Projects Grid */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
@@ -41,8 +42,10 @@
         .card span { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent); display: block; margin-bottom: 10px;}
 
         /* Contact */
-        .btn { display: inline-block; background: var(--text-primary); color: var(--bg-color); padding: 12px 24px; font-weight: bold; border-radius: 4px; border: none; cursor: pointer; }
+        .btn { display: inline-block; background: var(--text-primary); color: var(--bg-color); padding: 12px 24px; font-weight: bold; border-radius: 4px; border: none; cursor: pointer; text-decoration: none; }
         .btn:hover { background: var(--accent); color: white; border: none; }
+        .btn-outline { background: transparent; border: 1px solid var(--text-primary); color: var(--text-primary); }
+        .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
 
         @media (max-width: 600px) {
             h1 { font-size: 2.5rem; }
@@ -60,8 +63,9 @@
                 <br><br>
                 Core Focus: Operational Technology (OT), Network Defense, and Edge ML.
             </p>
-            <div style="margin-top: 20px;">
+            <div class="btn-group">
                 <a href="#work" class="btn">View Technical Work</a>
+                <a href="resume.pdf" target="_blank" class="btn btn-outline">Download Resume</a>
             </div>
         </section>
 
@@ -75,9 +79,6 @@
                         Designed a hardware-software co-designed system to detect food spoilage <strong>12 hours earlier</strong> than human senses.
                         Fused BME680 gas sensors with a Random Forest classifier on an ESP32.
                     </p>
-                    <p style="font-size: 0.9rem; color: #666;">
-                        <em>Tech: ESP32, C++, Random Forest, ThingSpeak</em>
-                    </p>
                     <a href="safe-iot-paper.pdf" target="_blank">Read Research Paper &rarr;</a>
                 </div>
 
@@ -88,8 +89,10 @@
                         Engineered hardware integration for real-time monitoring systems at Camware Technologies. 
                         Optimized I2C protocols for sensor data transmission (STM32/ESP32).
                     </p>
-                    <a href="#">View Code / Schematic &rarr;</a>
-                </div>
+                    
+                    <a href="embedded-project.pdf" target="_blank">View Schematic/Code &rarr;</a>
+                    
+                    </div>
 
                 <div class="card">
                     <span>Network Defense</span>
@@ -98,8 +101,7 @@
                         Executed vulnerability assessments and threat hunting operations at AICTE NEAT. 
                         Focused on securing Operational Technology (OT) networks against intrusion.
                     </p>
-                    <a href="#">View Case Study &rarr;</a>
-                </div>
+                    </div>
             </div>
         </section>
 
