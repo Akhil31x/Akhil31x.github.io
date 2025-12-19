@@ -1,67 +1,138 @@
-<section class="hero">
-    <h1>M. Akhilesh.</h1>
-    <p class="tagline">
-        Electronics & Communication Engineer bridging the gap between 
-        <strong>Embedded Systems</strong> and <strong>Cybersecurity</strong>. 
-        Focusing on IoT architectures and Network Defense.
-    </p>
-    <div style="margin-top: 20px;">
-        <a href="#work" class="btn">View Technical Work</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M. Akhilesh | Embedded & Security Engineer</title>
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1aa;
+            --accent: #3b82f6;
+            --card-bg: #171717;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        
+        body { background-color: var(--bg-color); color: var(--text-primary); line-height: 1.6; padding: 0 20px; }
+        
+        .container { max-width: 800px; margin: 0 auto; }
+        
+        /* Typography */
+        h1 { font-size: 3rem; font-weight: 800; letter-spacing: -0.05em; margin-bottom: 1rem; }
+        h2 { font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid #333; padding-bottom: 0.5rem; }
+        p { color: var(--text-secondary); margin-bottom: 1.5rem; }
+        a { color: var(--text-primary); text-decoration: none; border-bottom: 1px solid var(--accent); transition: 0.2s; }
+        a:hover { color: var(--accent); }
+
+        /* Sections */
+        section { margin: 5rem 0; }
+        
+        /* Hero */
+        .hero { min-height: 80vh; display: flex; flex-direction: column; justify-content: center; }
+        .tagline { font-size: 1.25rem; color: var(--text-secondary); max-width: 650px; }
+
+        /* Projects Grid */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .card { background: var(--card-bg); padding: 2rem; border-radius: 8px; border: 1px solid #333; transition: transform 0.2s; }
+        .card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .card h3 { margin-bottom: 0.5rem; font-size: 1.2rem; }
+        .card span { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent); display: block; margin-bottom: 10px;}
+
+        /* Contact */
+        .btn { display: inline-block; background: var(--text-primary); color: var(--bg-color); padding: 12px 24px; font-weight: bold; border-radius: 4px; border: none; cursor: pointer; }
+        .btn:hover { background: var(--accent); color: white; border: none; }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <section class="hero">
+            <h1>M. Akhilesh.</h1>
+            <p class="tagline">
+                Engineer bridging <strong>Embedded Systems</strong> and <strong>Cybersecurity</strong>. 
+                I build low-cost hardware architectures that solve high-stakes problems.
+                <br><br>
+                Core Focus: Operational Technology (OT), Network Defense, and Edge ML.
+            </p>
+            <div style="margin-top: 20px;">
+                <a href="#work" class="btn">View Technical Work</a>
+            </div>
+        </section>
+
+        <section id="work">
+            <h2>Selected Engineering</h2>
+            <div class="grid">
+                <div class="card">
+                    <span>97.2% Accuracy • Edge ML</span>
+                    <h3>SAFE-IoT Framework</h3>
+                    <p>
+                        Designed a hardware-software co-designed system to detect food spoilage <strong>12 hours earlier</strong> than human senses.
+                        Fused BME680 gas sensors with a Random Forest classifier on an ESP32.
+                    </p>
+                    <p style="font-size: 0.9rem; color: #666;">
+                        <em>Tech: ESP32, C++, Random Forest, ThingSpeak</em>
+                    </p>
+                    <a href="safe-iot-paper.pdf" target="_blank">Read Research Paper &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <span>Industrial Internship</span>
+                    <h3>Embedded System Deployment</h3>
+                    <p>
+                        Engineered hardware integration for real-time monitoring systems at Camware Technologies. 
+                        Optimized I2C protocols for sensor data transmission (STM32/ESP32).
+                    </p>
+                    <a href="#">View Code / Schematic &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <span>Network Defense</span>
+                    <h3>Threat Detection Protocol</h3>
+                    <p>
+                        Executed vulnerability assessments and threat hunting operations at AICTE NEAT. 
+                        Focused on securing Operational Technology (OT) networks against intrusion.
+                    </p>
+                    <a href="#">View Case Study &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>Technical Arsenal</h2>
+            <p>
+                I don't just write code; I understand the silicon it runs on.
+            </p>
+            <ul>
+                <li style="color: #a1a1aa; margin-bottom: 0.5rem;">
+                    <strong style="color:white">Hardware:</strong> ESP32, BME680, VLSI Digital Design
+                </li>
+                <li style="color: #a1a1aa; margin-bottom: 0.5rem;">
+                    <strong style="color:white">Software:</strong> Python (Data Science), Verilog, C++ (Embedded)
+                </li>
+                <li style="color: #a1a1aa; margin-bottom: 0.5rem;">
+                    <strong style="color:white">Protocols:</strong> I2C, UART, Network Security Standards
+                </li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <p>Currently open for roles in Embedded Systems and Security.</p>
+            <a href="mailto:makhilesh3105@gmail.com" class="btn">Email Me</a>
+            <br><br>
+            <a href="https://www.linkedin.com/in/makhilesh3105" target="_blank">LinkedIn</a>
+        </section>
+
+        <footer style="padding-bottom: 4rem; color: #555; font-size: 0.9rem;">
+            &copy; 2025 M. Akhilesh. Built for performance.
+        </footer>
     </div>
-</section>
 
-<section id="work">
-    <h2>Selected Engineering</h2>
-    <div class="grid">
-        <div class="card">
-            <span>Published Research</span>
-            <h3>SAFE-IoT Framework</h3>
-            <p>
-                Developed a Smart Analytics Framework for Early Food Spoilage Detection. 
-                Integrated sensor data with analytics to reduce waste.
-            </p>
-            <a href="#">Read Publication &rarr;</a>
-        </div>
-
-        <div class="card">
-            <span>Industrial Internship</span>
-            <h3>Embedded System Deployment</h3>
-            <p>
-                Worked at Camware Technologies on [Insert Microcontroller/Chip Name]. 
-                Handled I2C protocols and hardware integration for real-time monitoring.
-            </p>
-            <a href="#">View Schematic/Code &rarr;</a>
-        </div>
-
-        <div class="card">
-            <span>Network Security</span>
-            <h3>Threat Hunting & Defense</h3>
-            <p>
-                Executed threat detection protocols during internship at AICTE NEAT. 
-                Focused on network vulnerability assessment and defensive mechanisms.
-            </p>
-            <a href="#">View Case Study &rarr;</a>
-        </div>
-    </div>
-</section>
-
-
-
-<section id="about">
-    <h2>Technical Arsenal</h2>
-    <p>
-        I don't just write code; I understand the hardware it runs on. 
-        My approach combines low-level optimization with high-level security protocols.
-    </p>
-    <ul>
-        <li style="color: #a1a1aa; margin-bottom: 0.5rem;">
-            <strong style="color:white">Core:</strong> VLSI Digital Design, Verilog, Python for Data Science
-        </li>
-        <li style="color: #a1a1aa; margin-bottom: 0.5rem;">
-            <strong style="color:white">Protocols:</strong> I2C, UART, Network Security Standards
-        </li>
-        <li style="color: #a1a1aa; margin-bottom: 0.5rem;">
-            <strong style="color:white">Focus:</strong> Operational Technologies (OT) & Threat Hunting
-        </li>
-    </ul>
-</section>
+</body>
+</html>
